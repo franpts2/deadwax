@@ -1,13 +1,13 @@
 import { create } from "zustand"
 
-type ShelfState = {
+type SelectionState = {
 	hoveredId: string | null
 	selectedId: string | null
 	hover: (id: string | null) => void
 	select: (id: string | null) => void
 }
 
-export const useShelf = create<ShelfState>((set, get) => ({
+export const useSelection = create<SelectionState>((set, get) => ({
 	hoveredId: null,
 	selectedId: null,
 	hover: (id) => {
@@ -15,9 +15,3 @@ export const useShelf = create<ShelfState>((set, get) => ({
 	},
 	select: (id) => set({ selectedId: id, hoveredId: null }),
 }))
-
-/** Mutable camera state. Lives outside React so panning never re-renders the scene. */
-export const view = {
-	targetX: 0,
-	maxPan: 0,
-}
