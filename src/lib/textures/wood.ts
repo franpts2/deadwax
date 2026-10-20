@@ -1,6 +1,6 @@
 import * as THREE from "three"
 import { mulberry32 } from "../random"
-import { canvasTexture, createCanvas } from "./canvas"
+import { canvasTexture, createCanvas } from "./surface"
 
 const W = 1024
 const H = 256

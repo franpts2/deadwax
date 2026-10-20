@@ -9,6 +9,21 @@ export function createCanvas(width: number, height: number) {
 	return { canvas, ctx }
 }
 
+/**
+ * A canvas whose 2D context works in design units (millimetres for a sleeve),
+ * so type keeps real proportions regardless of the pixel resolution.
+ */
+export function createSurface(
+	width: number,
+	height: number,
+	designWidth = width,
+	designHeight = height,
+) {
+	const surface = createCanvas(width, height)
+	surface.ctx.scale(width / designWidth, height / designHeight)
+	return surface
+}
+
 export function canvasTexture(
 	canvas: HTMLCanvasElement,
 	options: { srgb?: boolean; anisotropy?: number } = {},
