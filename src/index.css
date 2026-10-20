@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+	--font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+	--color-ink: #ece6da;
+	--color-ink-dim: #9c958a;
+	--color-ink-faint: #6b655c;
+	--color-room: #08070a;
+	--color-amber: #d08a52;
+}
+
+@layer base {
+	html,
+	body,
+	#root {
+		height: 100%;
+	}
+
+	body {
+		margin: 0;
+		background: var(--color-room);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		overflow: hidden;
+	}
+
+	::selection {
+		background: var(--color-amber);
+		color: #0a090b;
+	}
+}
+
+/* The room behind the canvas. The canvas itself is transparent so this shows
+   through, which is cheaper than rendering a backdrop geometry. */
+.scene-room {
+	background:
+		radial-gradient(115% 85% at 50% 34%, #1c1714 0%, #100d0e 42%, #070608 78%, #050405 100%);
+}
+
+.film-grain::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: 40;
+	pointer-events: none;
+	opacity: 0.045;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+	background-size: 160px 160px;
+	mix-blend-mode: overlay;
+}
+
+.vignette::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+	pointer-events: none;
+	background: radial-gradient(
+		125% 90% at 50% 44%,
+		transparent 38%,
+		rgb(0 0 0 / 0.32) 74%,
+		rgb(0 0 0 / 0.62) 100%
+	);
+}
+
+@keyframes tooltip-in {
+	from {
+		opacity: 0;
+		transform: translateY(4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.tooltip-in {
+	animation: tooltip-in 160ms ease-out both;
+}
