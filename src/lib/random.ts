@@ -19,23 +19,10 @@ export function mulberry32(seed: number): () => number {
 	}
 }
 
-export function slugify(value: string): string {
-	return value
-		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "")
-		.toLowerCase()
-		.replace(/[^a-z0-9]+/g, "-")
-		.replace(/^-|-$/g, "")
-}
-
-export function luminance(hex: string): number {
-	const value = hex.replace("#", "")
-	const r = parseInt(value.slice(0, 2), 16) / 255
-	const g = parseInt(value.slice(2, 4), 16) / 255
-	const b = parseInt(value.slice(4, 6), 16) / 255
-	return 0.2126 * r + 0.7152 * g + 0.0722 * b
-}
-
-export function clamp(value: number, min: number, max: number): number {
-	return Math.min(max, Math.max(min, value))
+/**
+ * A deterministic stream for one record and one purpose. The salt keeps the
+ * spine, cover and disc generators from repeating the same sequence.
+ */
+export function seeded(value: string, salt?: string): () => number {
+	return mulberry32(hashString(salt ? `${value}-${salt}` : value))
 }
