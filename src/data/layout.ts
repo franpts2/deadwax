@@ -1,10 +1,12 @@
-import { GAP } from "../lib/dimensions"
-import type { RecordItem } from "./records"
+import { GAP } from "../constants/sleeve"
+import type { RecordItem } from "./types"
 
 export type PlacedRecord = RecordItem & { x: number }
 
 export type ShelfLayout = {
 	records: PlacedRecord[]
+	/** O(1) lookup for hover/selection, instead of scanning 152 records. */
+	byId: Map<string, PlacedRecord>
 	/** Total width of the records, edge to edge. */
 	span: number
 	/** Width including the case that holds them. */
@@ -25,7 +27,12 @@ export function layoutRecords(items: RecordItem[]): ShelfLayout {
 		return { ...item, x }
 	})
 
-	return { records, span, width: span + 0.06 }
+	return {
+		records,
+		byId: new Map(records.map((record) => [record.id, record])),
+		span,
+		width: span + 0.06,
+	}
 }
 
 /** Nearest record to a world x inside the shelf, or null in the gaps/ends. */
