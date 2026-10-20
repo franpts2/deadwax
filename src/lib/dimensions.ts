@@ -1,6 +1,7 @@
 export const SLEEVE = 0.314 // 12.375in, in metres
 export const HALF = SLEEVE / 2
 export const SPINE_HALF = 0.00015 // spine art floats a fraction of a mm off the board
+export const SPINE_Z = HALF + SPINE_HALF // depth of the spine face in shelf space
 
 export const SHELF_BASE_Y = 0.8
 export const RECORD_Y = SHELF_BASE_Y + HALF

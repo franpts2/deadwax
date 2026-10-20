@@ -2,7 +2,7 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { useEffect, useMemo, useRef } from "react"
 import * as THREE from "three"
 import type { PlacedRecord, ShelfLayout } from "../data/layout"
-import { CAMERA_Y, CAMERA_Z, FOCUS_CAMERA_Z, LOOK_Y } from "../lib/dimensions"
+import { CAMERA_Y, CAMERA_Z, FOCUS_CAMERA_Z, LOOK_Y, SPINE_Z } from "../lib/dimensions"
 import { clamp } from "../lib/random"
 import { useShelf, view } from "../store/shelf"
 
@@ -24,7 +24,10 @@ export function CameraRig({ layout }: { layout: ShelfLayout }) {
 	)
 
 	const aspect = size.width / Math.max(1, size.height)
-	const visibleWidth = 2 * CAMERA_Z * Math.tan(HALF_FOV) * aspect
+	// Measure at the spine plane, not at the camera's own z, or the pan range
+	// comes out far too small: the rows are ~160mm in front of the origin.
+	const spineDistance = CAMERA_Z - SPINE_Z
+	const visibleWidth = 2 * spineDistance * Math.tan(HALF_FOV) * aspect
 	const maxPan = Math.max(0, layout.span / 2 - visibleWidth / 2 + 0.01)
 	view.maxPan = maxPan
 
