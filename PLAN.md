@@ -23,6 +23,20 @@ edge to edge — and lets you pull one out to see the cover and the disc.
 legibility fight each other. The plan below resolves it with hover labels, zoom-on-click,
 and a list view — not by making the shelf fake-wide.
 
+### Status — week 1 slice
+
+Shipped on `feat/shelf-scene`:
+
+- [x] One long shelf, 152 records, per-record thickness, depth and lean
+- [x] Procedural spine, cover, disc and wood textures (no assets)
+- [x] Hover label, click-to-pull choreography, disc reveal, Esc to return
+- [x] Drag/wheel panning, camera dolly on focus, depth of field
+- [ ] Filters, search, deep links, grid fallback
+- [ ] Accounts, collections, backend, deployment
+
+Deviation from this plan: the first slice is one 152-record row rather than 40–60 records
+per shelf, because the brief asks for a shelf that runs off-screen and scrolls.
+
 ---
 
 ## 1. One sentence
