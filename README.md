@@ -31,13 +31,19 @@ npm run typecheck
 
 ```
 src/
-  data/          fixture collection, layout maths
-  lib/           dimensions, seeded randomness
-  lib/textures/  procedural canvas textures (spines, covers, disc, wood)
-  scene/         R3F scene: shelf, record, camera rig, lighting, DOF
-  store/         selection state (zustand)
-  ui/            HTML overlay and metadata card
+  constants/     sleeve, shelf, camera, interaction and animation tuning
+  data/          fixture collection, palettes, types, layout maths
+  lib/           pure helpers: seeded randomness, colour, slug, cursor, pointer
+  lib/textures/  procedural canvas textures (spines, covers, disc, wood, backdrop)
+  hooks/         reusable React/three hooks: disposal, keyboard, reduced motion
+  scene/         R3F scene: canvas, shelf, record, camera rig, lighting, DOF
+  store/         selection state (zustand) and mutable camera pan
+  ui/            HTML overlay components
 ```
+
+Components compose, hooks animate, and `lib/` draws. One component per file,
+named after the file; tuning numbers live in `constants/` so the same value is
+never written twice.
 
 Everything in the scene is generated in code — there are no model files or image
 assets yet. Spine artwork, cover art and the disc grooves are drawn to canvases at
