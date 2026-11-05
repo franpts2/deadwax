@@ -34,8 +34,8 @@
 	}
 }
 
-/* The room behind the canvas. The canvas itself is transparent so this shows
-   through, which is cheaper than rendering a backdrop geometry. */
+/* Fallback room colour behind the canvas. The scene paints its own backdrop so
+   post-processing sees it; this only shows before the first frame. */
 .scene-room {
 	background:
 		radial-gradient(115% 85% at 50% 34%, #1c1714 0%, #100d0e 42%, #070608 78%, #050405 100%);

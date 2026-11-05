@@ -1,7 +1,14 @@
+import { useShelfKeyboard } from "./hooks/useShelfKeyboard"
+import { SceneCanvas } from "./scene/SceneCanvas"
+import { Overlay } from "./ui/Overlay"
+
 export default function App() {
+	useShelfKeyboard()
+
 	return (
-		<main className="grid h-dvh place-items-center">
-			<h1 className="font-display text-4xl">Vinyl Shelf</h1>
-		</main>
+		<div className="scene-room film-grain vignette relative h-dvh w-full overflow-hidden">
+			<SceneCanvas />
+			<Overlay />
+		</div>
 	)
 }

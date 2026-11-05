@@ -2,6 +2,31 @@
 	"name": "vinyl-shelf",
 	"private": true,
 	"version": "0.1.0",
+	"description": "A three-dimensional shelf of records built with React, three.js and Tailwind CSS.",
+	"license": "MIT",
+	"author": "Francisca Portugal",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/franpts2/vinyl-shelf.git"
+	},
+	"bugs": {
+		"url": "https://github.com/franpts2/vinyl-shelf/issues"
+	},
+	"homepage": "https://github.com/franpts2/vinyl-shelf#readme",
+	"keywords": [
+		"three.js",
+		"react-three-fiber",
+		"react",
+		"typescript",
+		"tailwindcss",
+		"vite",
+		"3d",
+		"webgl",
+		"vinyl"
+	],
+	"engines": {
+		"node": "^20.19.0 || >=22.12.0"
+	},
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
