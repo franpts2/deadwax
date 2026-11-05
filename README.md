@@ -1,4 +1,4 @@
-# Vinyl Shelf
+# Deadwax
 
 <div align="left">
 	<img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
@@ -12,6 +12,9 @@
 A three-dimensional shelf of records, spines out, the way they actually sit in a room.
 Pull one out and it turns to face you: the cover appears and the disc slides out of the
 sleeve.
+
+Named for the run-out groove, **Deadwax** is a browser experiment in physical
+interaction, procedural graphics and performance.
 
 **Status:** week 1 slice — one shelf, 152 records, full pull-out choreography. The
 collection is a fixture file; there is no backend yet.
@@ -54,7 +57,9 @@ metadata, and pull a record out to see the cover and the disc.
 
 ## Live Demo
 
-Not deployed yet. To run it locally:
+Live at: [https://deadwax.franciscapt.dev](https://deadwax.franciscapt.dev)
+
+To run it locally instead:
 
 ```bash
 npm install
@@ -78,7 +83,7 @@ Then open [http://localhost:5173](http://localhost:5173).
 **Folder Structure**
 
 ```text
-vinyl-shelf/
+deadwax/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -128,6 +133,17 @@ npm run dev        # http://localhost:5173
 npm run build      # typecheck + production build
 npm run preview    # serve the production build
 npm run typecheck  # TypeScript only
+npm run deploy     # build and deploy to Cloudflare Workers
+```
+
+## Deployment
+
+Deadwax is hosted on Cloudflare Workers Static Assets at
+[deadwax.franciscapt.dev](https://deadwax.franciscapt.dev). The Worker and its custom
+domain are declared in [`wrangler.jsonc`](./wrangler.jsonc), so a deploy only needs:
+
+```bash
+npm run deploy
 ```
 
 ## Roadmap
@@ -139,7 +155,7 @@ npm run typecheck  # TypeScript only
 - [ ] HTML grid fallback for accessibility and SEO
 - [ ] Deep links to individual records
 - [ ] Discogs import and a real backend (D1 + R2)
-- [ ] Deployment (Cloudflare Pages)
+- [x] Deployment to Cloudflare Workers
 
 ## Performance Notes
 
@@ -161,4 +177,4 @@ MIT © 2026 Francisca Portugal. See [LICENSE](./LICENSE).
 
 ---
 
-_Vinyl Shelf by Francisca Portugal — frontend engineer._
+_Deadwax by Francisca Portugal — frontend engineer._

@@ -5,7 +5,7 @@ export function Header({ count }: { count: number }) {
 				<div className="flex items-center gap-2.5">
 					<span className="h-1.5 w-1.5 rounded-full bg-amber" />
 					<span className="text-[10px] font-medium uppercase tracking-[0.34em] text-ink">
-						Vinyl Shelf
+						Deadwax
 					</span>
 				</div>
 				<p className="mt-2.5 text-[11px] tracking-wide text-ink-faint">{count} records · one shelf</p>

@@ -1,5 +1,5 @@
 {
-	"name": "vinyl-shelf",
+	"name": "deadwax",
 	"private": true,
 	"version": "0.1.0",
 	"description": "A three-dimensional shelf of records built with React, three.js and Tailwind CSS.",
@@ -7,12 +7,12 @@
 	"author": "Francisca Portugal",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/franpts2/vinyl-shelf.git"
+		"url": "git+https://github.com/franpts2/deadwax.git"
 	},
 	"bugs": {
-		"url": "https://github.com/franpts2/vinyl-shelf/issues"
+		"url": "https://github.com/franpts2/deadwax/issues"
 	},
-	"homepage": "https://github.com/franpts2/vinyl-shelf#readme",
+	"homepage": "https://github.com/franpts2/deadwax#readme",
 	"keywords": [
 		"three.js",
 		"react-three-fiber",
@@ -32,7 +32,8 @@
 		"dev": "vite",
 		"build": "tsc --noEmit && vite build",
 		"preview": "vite preview",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"deploy": "npm run build && wrangler deploy"
 	},
 	"dependencies": {
 		"@react-spring/three": "^10.1.2",
@@ -52,6 +53,7 @@
 		"@vitejs/plugin-react": "^6.1.2",
 		"tailwindcss": "^4.3.3",
 		"typescript": "~5.9.3",
-		"vite": "^8.3.4"
+		"vite": "^8.3.4",
+		"wrangler": "^4.158.0"
 	}
 }
