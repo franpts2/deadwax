@@ -177,7 +177,6 @@ MIT © 2026 Francisca Portugal. See [LICENSE](./LICENSE).
 
 - Album titles, artists, years and labels are used as factual metadata. No real cover
   artwork, scans or audio is included; all artwork is generated procedurally.
-- Fonts are Instrument Serif and Inter, loaded from Google Fonts.
 
 ---
 
