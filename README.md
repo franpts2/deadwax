@@ -13,9 +13,6 @@ A three-dimensional shelf of records, spines out, the way they actually sit in a
 Pull one out and it turns to face you: the cover appears and the disc slides out of the
 sleeve.
 
-A personal frontend project by [Francisca Portugal](https://franciscapt.dev), built to
-explore physical interaction, procedural graphics and performance in the browser.
-
 **Status:** week 1 slice — one shelf, 152 records, full pull-out choreography. The
 collection is a fixture file; there is no backend yet.
 
