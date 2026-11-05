@@ -1,5 +1,6 @@
 # Deadwax
 
+[![Live site](https://img.shields.io/badge/Live_Site-deadwax.franciscapt.dev-c8673b)](https://deadwax.franciscapt.dev)
 [![CI and deploy](https://github.com/franpts2/deadwax/actions/workflows/ci.yml/badge.svg)](https://github.com/franpts2/deadwax/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
