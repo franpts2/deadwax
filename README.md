@@ -1,6 +1,9 @@
 # Deadwax
 
 <div align="left">
+	<a href="https://deadwax.franciscapt.dev">
+		<img src="https://img.shields.io/badge/Live_Site-deadwax.franciscapt.dev-c8673b?style=for-the-badge" alt="Live site"/>
+	</a>
 	<img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
 	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
 	<img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
