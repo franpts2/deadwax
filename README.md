@@ -8,9 +8,6 @@ This repo is being built in slices. **Week 1 slice:** one shelf, 152 records, dr
 panning, spine hover labels, depth of field, and the full pull-out choreography with the
 disc reveal. No backend yet — the collection is a fixture file.
 
-See [`PLAN.md`](./PLAN.md) for the product plan, data model, realism notes, performance
-budget and roadmap.
-
 ## Stack
 
 - Vite + React 19 + TypeScript
