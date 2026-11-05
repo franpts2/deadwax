@@ -1,15 +1,15 @@
 # Deadwax
 
+[![CI and deploy](https://github.com/franpts2/deadwax/actions/workflows/ci.yml/badge.svg)](https://github.com/franpts2/deadwax/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 <div align="left">
-	<a href="https://deadwax.franciscapt.dev">
-		<img src="https://img.shields.io/badge/Live_Site-deadwax.franciscapt.dev-c8673b?style=for-the-badge" alt="Live site"/>
-	</a>
-	<img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+	<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
 	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-	<img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
-	<img src="https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite"/>
+	<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
+	<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+	<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite"/>
 	<img src="https://img.shields.io/badge/three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="three.js"/>
-	<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"/>
 </div>
 
 A three-dimensional shelf of records, spines out, the way they actually sit in a room.
@@ -31,6 +31,8 @@ image or model assets.
 
 The goal is a shelf that is genuinely browsable: pan along it by eye, hover a spine for
 metadata, and pull a record out to see the cover and the disc.
+
+[Open the deployed application](https://deadwax.franciscapt.dev)
 
 ## Key Features
 
