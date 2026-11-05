@@ -146,6 +146,10 @@ domain are declared in [`wrangler.jsonc`](./wrangler.jsonc), so a deploy only ne
 npm run deploy
 ```
 
+Pushes to `main` deploy automatically through GitHub Actions. The workflow needs two
+repository secrets: `CLOUDFLARE_API_TOKEN` (scoped to Workers) and
+`CLOUDFLARE_ACCOUNT_ID`.
+
 ## Roadmap
 
 - [x] One shelf, 152 records, panning, hover labels, pull-out and disc reveal
